@@ -1,0 +1,61 @@
+@use '../abstracts' as *;
+
+html {
+  font-size: $initial-fsz;
+  min-width: $min-content-width;
+}
+
+html,
+body,
+.root {
+  @include width-height($full-width, $full-height);
+}
+
+body {
+  @include fonts();
+}
+
+.root {
+}
+
+.main {
+  @include width-height($full-width);
+  flex: 1 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.header,
+.footer {
+  flex-shrink: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  outline: none;
+  cursor: pointer;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.icon-fill-color {
+  --icon-fill-color: #{$white-color};
+}
