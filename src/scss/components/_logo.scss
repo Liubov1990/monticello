@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+.logo {
+  cursor: pointer;
+  width: 241px;
+  height: 54px;
+  @include for-tablet-portrait-down {
+    width: 180px;
+    height: 40px;
+  }
+  &__image {
+    @include responsive-image();
+  }
+}

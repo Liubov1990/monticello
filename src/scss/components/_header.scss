@@ -1,0 +1,91 @@
+@use '../abstracts' as *;
+
+.header {
+  @include flex($justification: center);
+  @include width-height($full-width);
+  position: absolute; //////////////////// !!!!!
+  top: 53px;
+  left: 0;
+  z-index: 50;
+  @include for-tablet-landscape-down {
+    top: 0;
+    padding-top: 20px;
+  }
+
+  &__inner {
+    @include flex($alignment: center, $justification: space-between);
+    @include width-height($full-width);
+  }
+
+  &__nav {
+    @include flex($alignment: center);
+    gap: 73px;
+    transform: translate(53px, 1px);
+    @include for-laptop-down {
+      gap: 40px;
+      transform: translate(10px, 0);
+    }
+    @include for-tablet-portrait-down {
+      @include width-height($full-width, calc(100vh - 74px));
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 27px;
+      position: fixed;
+      top: 74px;
+      left: -10px;
+      background: $nav-bg;
+      padding: 64px 15px;
+      box-sizing: border-box;
+      z-index: 999;
+      overflow-y: hidden;
+      display: none;
+
+      &.is-open {
+        display: flex;
+      }
+    }
+    @include for-tablet-portrait-down {
+      @include width-height($full-width, calc(100vh - 50px));
+      top: 59px;
+    }
+
+    &-link {
+      @include fonts(
+        $f-family: font('source-sns'),
+        $f-size: 0.875rem,
+        $l-height: 1.257,
+        $t-transform: uppercase,
+        $color: $white-color
+      );
+      position: relative;
+      display: inline-block;
+      padding: 10px;
+
+      &::before {
+        @include width-height(9px, 9px);
+        @include border(1px, solid, $white-color);
+        @include border-radius(50%);
+        @include transition(background 0.5s ease);
+        content: '';
+        position: absolute;
+        display: inline-block;
+        top: 13px;
+        left: -13px;
+        background: transparent;
+        box-sizing: border-box;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        &::before {
+          background: $white-color;
+        }
+      }
+    }
+  }
+
+  &__social-icons {
+    margin-left: 50px;
+  }
+}

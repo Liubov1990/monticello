@@ -1,0 +1,39 @@
+@use '../abstracts' as *;
+
+.swiper-pagination-bullet {
+  @include width-height(10px, 10px);
+  @include border(1px, solid, $white-color);
+  text-align: center;
+  background: transparent;
+  box-sizing: border-box;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: $white-color;
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  @include for-vertical-dots {
+    gap: 30px;
+  }
+  @include for-tablet-portrait-down {
+    gap: 15px;
+  }
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets,
+.swiper-vertical > .swiper-pagination-bullets {
+  right: 56px;
+  width: 10px;
+  height: fit-content;
+  @include for-vertical-dots {
+    right: 22px;
+  }
+  // @include for-tablet-portrait-down {
+  //   transform: translateY(-90%);
+  // }
+}

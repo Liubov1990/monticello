@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+.arrow {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  @include for-tablet-landscape-down {
+    bottom: 30px;
+  }
+  @include for-phone-only {
+    bottom: 20px;
+  }
+
+  &:hover {
+    &__icon-link {
+      border-color: $white-color;
+    }
+    .hero-slider__to-projects-icon {
+      transform: scale(1.3);
+    }
+  }
+
+  &__icon-link {
+    @include transition(border-color 0.1s ease-in-out);
+    border-color: $white-color-07;
+  }
+
+  &__icon {
+    @include transition(transform 0.5s ease-in-out);
+  }
+}
