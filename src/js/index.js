@@ -1,3 +1,4 @@
+import './toggleNavigation.js';
 import { heroSliderOptions } from './constants/slider.js';
 
 document.addEventListener('DOMContentLoaded', function () {
