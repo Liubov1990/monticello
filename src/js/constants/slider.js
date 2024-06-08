@@ -4,7 +4,7 @@ export const heroSliderOptions = {
   loop: true,
   speed: 1000,
   autoplay: {
-    delay: 9000,
+    delay: 7000,
     // waitForTransition: false,
     disableOnInteraction: false
   },
