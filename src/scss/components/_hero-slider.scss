@@ -2,7 +2,7 @@
 
 .hero {
   position: relative;
-  overflow: hidden;
+  background: $hero-slider-bg;
 
   .hero-slider {
     color: $white-color;
@@ -12,7 +12,7 @@
 
     &__item {
       position: relative;
-      background: $hero-slider-bg;
+      overflow: hidden;
     }
 
     &__image {
