@@ -1,1 +1,7 @@
 @use './../abstracts' as *;
+
+.root:has(.header__burger--squeeze.is-active) {
+  .header {
+    background: $header-bg;
+  }
+}

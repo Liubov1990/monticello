@@ -5,15 +5,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monticello</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./src/css/index.min.css" />
   </head>
   <body>
-    <div class="root"></div>
+    <div class="root">
+      <!-- HERO -->
+      <section class="swiper hero">
+        <!-- HEADER -->
+        <header class="header">
+          <div class="container header__inner">
+            <div class="logo">
+              <a href="#" aria-label="Return to the Home Page" class="logo__link">
+                <img src="./assets/images/hero-slider/logo.png" alt="Monticello logo" class="logo__image" />
+              </a>
+            </div>
 
+            <!-- NAVIGATION -->
+            <nav class="header__nav">
+              <a href="#about" aria-label="Link to About" class="header__nav-link">ABOUT US</a>
+              <a href="#projects" aria-label="Link to Projects" class="header__nav-link">PROJECTS</a>
+              <a href="#news" aria-label="Link to News" class="header__nav-link">NEWS</a>
+              <a href="#contact" aria-label="Link to Contact" class="header__nav-link">CONTACT</a>
+            </nav>
+
+            <!-- SOCIAL-ICONS -->
+            <div class="social-icons header__social-icons">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                aria-label="Find us on Facebook"
+                title="Facebook"
+                class="icon-link"
+              >
+                <svg class="icon icon-fill-color">
+                  <use xlink:href="./assets/svg/sprite.svg#facebook-icon" />
+                </svg>
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                aria-label="Find us on Twitter"
+                title="Twitter"
+                class="icon-link"
+              >
+                <svg class="icon icon-fill-color">
+                  <use xlink:href="./assets/svg/sprite.svg#twitter-icon" />
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                aria-label="Find us on Instagram"
+                title="Instagram"
+                class="icon-link"
+              >
+                <svg class="icon icon-fill-color">
+                  <use xlink:href="./assets/svg/sprite.svg#instagram-icon" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- BURGER -->
+            <div id="burger" class="header__burger header__burger--squeeze">
+              <div class="header__burger-box">
+                <div class="header__burger-inner"></div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- SLIDER -->
+        <div class="swiper-wrapper hero-slider">
+          <div class="swiper-slide hero-slider__item">
+            <img
+              src="./assets/images/hero-slider/tu_tram_pham_202263_1.webp"
+              alt=""
+              loading="lazy"
+              width="1600"
+              height="800"
+              class="hero-slider__image"
+            />
+            <div class="hero-slider__overlay">
+              <div class="hero-slider__content container">
+                <h1 class="hero-slider__title">SIMPLE & MODERN</h1>
+                <p class="hero-slider__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide hero-slider__item">
+            <img
+              src="./assets/images/hero-slider/tu_tram_pham_202263_1.webp"
+              alt=""
+              loading="lazy"
+              width="1600"
+              height="800"
+              class="hero-slider__image"
+            />
+            <div class="hero-slider__overlay">
+              <div class="hero-slider__content container">
+                <h1 class="hero-slider__title">SIMPLE & MODERN</h1>
+                <p class="hero-slider__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide hero-slider__item">
+            <img
+              src="./assets/images/hero-slider/tu_tram_pham_202263_1.webp"
+              alt=""
+              loading="lazy"
+              width="1600"
+              height="800"
+              class="hero-slider__image"
+            />
+            <div class="hero-slider__overlay">
+              <div class="hero-slider__content container">
+                <h1 class="hero-slider__title">SIMPLE & MODERN</h1>
+                <p class="hero-slider__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide hero-slider__item">
+            <img
+              src="./assets/images/hero-slider/tu_tram_pham_202263_1.webp"
+              alt=""
+              loading="lazy"
+              width="1600"
+              height="800"
+              class="hero-slider__image"
+            />
+            <div class="hero-slider__overlay">
+              <div class="hero-slider__content container">
+                <h1 class="hero-slider__title">SIMPLE & MODERN</h1>
+                <p class="hero-slider__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide hero-slider__item">
+            <img
+              src="./assets/images/hero-slider/tu_tram_pham_202263_1.webp"
+              alt=""
+              loading="lazy"
+              width="1600"
+              height="800"
+              class="hero-slider__image"
+            />
+            <div class="hero-slider__overlay">
+              <div class="hero-slider__content container">
+                <h1 class="hero-slider__title">SIMPLE & MODERN</h1>
+                <p class="hero-slider__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-vertical"></div>
+
+        <!-- ARROW TO-BOTTOM -->
+        <div class="arrow">
+          <a href="#" aria-label="Go to Projects" class="icon-link arrow__icon-link">
+            <svg class="icon icon-fill-color arrow__icon">
+              <use xlink:href="./assets/svg/sprite.svg#angle-down-icon" />
+            </svg>
+          </a>
+        </div>
+      </section>
+      <main class="main"></main>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script type="module" src="./src/js/index.js"></script>

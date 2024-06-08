@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+
+.icon-link {
+  @include flex($alignment: center, $justification: center);
+  @include border(1px, solid, $white-color-04);
+  @include border-radius(50%);
+  @include width-height(40px, 40px);
+  @include transition(border-color, border-width 0.1s ease-in-out);
+  text-align: center;
+  box-sizing: border-box;
+  @include for-tablet-landscape-down {
+    @include width-height(35px, 35px);
+  }
+  @include for-phone-only {
+    @include width-height(30px, 30px);
+  }
+
+  &:hover {
+    border-color: $white-color;
+    border-width: 2px;
+  }
+}
+
+.icon {
+  @include width-height(15px, 16px);
+}
