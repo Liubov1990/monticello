@@ -24,14 +24,49 @@ body {
 }
 
 .container {
-  max-width: 1200px;
-  padding: 0 15px;
+  max-width: 1230px;
+  padding: 0 30px;
   box-sizing: border-box;
+  @include for-tablet-landscape-down {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  @include for-tablet-portrait-down {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.section {
+  @include flex(column, center);
 }
 
 .header,
 .footer {
   flex-shrink: 0;
+}
+
+.heading {
+  @extend %heading;
+  text-align: center;
+
+  &::after {
+    @include border(1px, solid, $main-text-color);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -31px);
+    width: 98px;
+    @include for-phone-only {
+      transform: translate(-50%, -18px);
+    }
+  }
+}
+
+.text-icon {
+  @include width-height(9px, 12px);
+  margin-right: 6px;
 }
 
 a {
