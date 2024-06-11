@@ -76,5 +76,8 @@
       padding-bottom: 40px;
       margin-top: 24px;
     }
+    @include for-phone-only {
+      margin-top: 15px;
+    }
   }
 }

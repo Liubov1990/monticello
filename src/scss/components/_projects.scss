@@ -14,11 +14,11 @@
     padding-bottom: 141px;
     @include for-tablet-landscape-down {
       padding-top: 64px;
-      padding-bottom: 80px;
+      padding-bottom: 70px;
     }
     @include for-phone-only {
       padding-top: 50px;
-      padding-bottom: 40px;
+      padding-bottom: 30px;
     }
   }
 
@@ -31,7 +31,7 @@
     }
     @include for-phone-only {
       gap: 20px;
-      margin-top: 20px;
+      margin-top: 5px;
     }
   }
 

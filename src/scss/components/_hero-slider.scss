@@ -45,8 +45,8 @@
       @include fonts($f-weight: $fw-bold, $l-spacing: 0.1em, $t-transform: uppercase, $color: $white-color);
       @include responsive-font(16, 80);
       @include responsive-line-height(22, 50);
-      margin-bottom: 13px;
-      margin-top: 39px;
+      margin-bottom: 16px;
+      margin-top: 41px;
       @include for-desktop-up {
         font-size: 80px;
       }

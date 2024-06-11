@@ -1,0 +1,95 @@
+@use '../abstracts' as *;
+
+.gallery {
+  &__inner {
+    @include flex(column, center);
+    @include width-height($full-width);
+    padding-top: 143px;
+    padding-bottom: 150px;
+    @include for-tablet-landscape-down {
+      padding-top: 64px;
+      padding-bottom: 70px;
+    }
+    @include for-phone-only {
+      padding-top: 50px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__items-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 10px;
+    margin-top: 54px;
+    margin-bottom: 60px;
+    @include for-tablet-portrait-down {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include for-tablet-landscape-down {
+      margin-top: 24px;
+      margin-bottom: 35px;
+    }
+    @include for-phone-only {
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:first-child {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .gallery__zoom-in-btn {
+        @include animateDisplayTransition(0.5s);
+      }
+    }
+  }
+
+  &__image {
+    @include responsive-image();
+  }
+
+  &__item-overlay {
+    @include flex(column, center, center);
+    @include width-height($full-width, $full-height);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__zoom-in-btn {
+    background: transparent;
+    border: none;
+    display: none;
+    opacity: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__zoom-in-icon {
+    @include width-height(70px, 70px);
+    @include for-tablet-landscape-down {
+      @include width-height(45px, 45px);
+    }
+    @include for-tablet-portrait-down {
+      @include width-height(70px, 70px);
+    }
+    @include for-phone-only {
+      @include width-height(45px, 45px);
+    }
+  }
+}

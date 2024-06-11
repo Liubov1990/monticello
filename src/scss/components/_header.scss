@@ -3,7 +3,7 @@
 .header {
   @include flex($justification: center);
   @include width-height($full-width);
-  position: absolute; //////////////////// !!!!!
+  position: absolute;
   top: 53px;
   left: 0;
   z-index: 50;
@@ -20,10 +20,13 @@
   &__nav {
     @include flex($alignment: center);
     gap: 73px;
-    transform: translate(53px, 1px);
+    transform: translate(28px, 1px);
+    @include for-vertical-dots {
+      gap: 55px;
+      transform: translate(15px, 0);
+    }
     @include for-laptop-down {
       gap: 40px;
-      transform: translate(10px, 0);
     }
     @include for-tablet-portrait-down {
       @include width-height($full-width, calc(100vh - 74px));
@@ -83,9 +86,5 @@
         }
       }
     }
-  }
-
-  &__social-icons {
-    margin-left: 50px;
   }
 }
