@@ -1,0 +1,110 @@
+@use '../abstracts' as *;
+
+.news {
+  &-slider {
+    &__item {
+      @include flex();
+      color: $main-text-color;
+
+      &-post {
+        @include flex(column);
+        @include width-height($full-width, $full-height);
+        max-height: 514px;
+        max-width: 370px;
+        background: $white-color;
+        margin: 0 auto;
+      }
+      &-image {
+        @include responsive-image();
+        @include width-height($full-height);
+        max-height: 240px;
+        @include for-tablet-landscape-down {
+          max-height: 200px;
+        }
+        @include for-phone-only {
+          max-height: 180px;
+        }
+      }
+
+      &-text-content {
+        @include flex(column);
+        flex-grow: 1;
+        padding: 30px 20px;
+        box-sizing: border-box;
+        @include for-laptop-down {
+          padding: 20px 15px;
+        }
+        @include for-tablet-landscape-down {
+          padding: 15px 10px;
+        }
+      }
+
+      &-title {
+        @include fonts($f-weight: $fw-bold, $t-transform: uppercase);
+        @include responsive-font(16, 22);
+        @include responsive-line-height(20, 26.82);
+        margin-top: 0;
+        margin-bottom: 12px;
+        @include for-desktop-up {
+          font-size: 1.375rem;
+          line-height: 1.219;
+        }
+      }
+
+      &-description {
+        @extend %description;
+        @include trancLines(2);
+        line-height: 1.361;
+        margin-top: 0;
+        margin-bottom: 39px;
+        @include for-laptop-down {
+          @include responsive-line-height(16, 24.51);
+          margin-bottom: 25px;
+        }
+        @include for-phone-only {
+          line-height: 1.2;
+          margin-bottom: 18px;
+        }
+      }
+
+      &-author-info {
+        @include flex($alignment: center);
+        margin-top: auto;
+      }
+
+      &-author-photo {
+        @include width-height(60px, 60px);
+        @include border-radius(50%);
+        margin-right: 20px;
+        @include for-tablet-portrait-down {
+          margin-right: 13px;
+        }
+      }
+
+      &-post-details {
+        @include flex(column);
+      }
+
+      &-author-name,
+      &-post-date {
+        display: inline-block;
+      }
+
+      &-author-name {
+        @include fonts($l-height: 1.218, $t-transform: uppercase);
+        @include responsive-font(14, 18);
+        margin-bottom: 5px;
+        @include for-desktop-up {
+          font-size: 1.125rem;
+        }
+        @include for-phone-only {
+          font-size: 0.875rem;
+        }
+      }
+
+      &-post-date {
+        @include fonts($f-size: 0.875rem, $l-height: 1.219, $color: $accent-color);
+      }
+    }
+  }
+}

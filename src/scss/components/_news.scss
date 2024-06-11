@@ -1,0 +1,80 @@
+@use '../abstracts' as *;
+
+.news {
+  @include width-height($full-width);
+  position: relative;
+
+  &__background-image {
+    max-height: 978px;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    display: block;
+    @include for-laptop-down {
+      max-height: 850px;
+    }
+    @include for-tablet-landscape-down {
+      max-height: 710px;
+    }
+    @include for-tablet-portrait-down {
+      max-height: 670px;
+    }
+    @include for-phone-only {
+      max-height: 580px;
+    }
+  }
+
+  &__overlay {
+    @include flex(column, center);
+    @include width-height($full-width, $full-height);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding-top: 113px;
+    box-sizing: border-box;
+    @include for-tablet-landscape-down {
+      padding-top: 64px;
+    }
+    @include for-phone-only {
+      justify-content: center;
+      padding-top: 0;
+    }
+  }
+
+  &__container {
+    @include flex($justification: center);
+    width: 100%;
+    position: relative;
+    max-width: 1410px;
+    padding-left: 120px;
+    padding-right: 120px;
+    box-sizing: border-box;
+    @include for-laptop-down {
+      padding-left: 90px;
+      padding-right: 90px;
+    }
+    @include for-tablet-portrait-down {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+    @include for-phone-only {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  .newsSwiperSlider {
+    padding-bottom: 58px;
+    margin-top: 54px;
+    @include for-tablet-landscape-down {
+      padding-bottom: 48px;
+      margin-top: 34px;
+    }
+    @include for-tablet-portrait-down {
+      padding-bottom: 40px;
+      margin-top: 24px;
+    }
+  }
+}

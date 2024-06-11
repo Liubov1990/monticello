@@ -18,7 +18,7 @@
     }
     @include for-phone-only {
       padding-top: 50px;
-      padding-bottom: 50px;
+      padding-bottom: 40px;
     }
   }
 
@@ -113,9 +113,6 @@
     @include for-desktop-up {
       font-size: 1.375rem;
     }
-    @include for-phone-only {
-      font-size: 1rem;
-    }
   }
 
   &__name {
@@ -129,28 +126,18 @@
   }
 
   &__description {
-    @include fonts($f-family: font('opn-sns'));
-    @include responsive-font(16, 18);
+    @extend %description;
     @include responsive-line-height(22, 30);
-    display: block;
     margin-top: 0;
     margin-bottom: 31px;
 
     @include for-desktop-up {
-      font-size: 1.125rem;
       line-height: 1.666;
     }
     @include for-tablet-landscape-down {
-      // trunc text when more, than 3 lines
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      line-clamp: 3;
-      -webkit-box-orient: vertical;
+      @include trancLines(3);
     }
     @include for-phone-only {
-      font-size: 1rem;
       line-height: 1.375;
     }
   }

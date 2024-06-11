@@ -39,6 +39,7 @@ body {
 
 .section {
   @include flex(column, center);
+  @include width-height($full-width);
 }
 
 .header,
@@ -60,6 +61,13 @@ body {
     width: 98px;
     @include for-phone-only {
       transform: translate(-50%, -18px);
+    }
+  }
+
+  &--white {
+    color: $white-color;
+    &::after {
+      border-color: $white-color;
     }
   }
 }

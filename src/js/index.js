@@ -1,6 +1,7 @@
 import './toggleNavigation.js';
-import { heroSliderOptions } from './constants/slider.js';
+import { heroSliderOptions, newsSliderOptions } from './constants/slider.js';
 
 document.addEventListener('DOMContentLoaded', function () {
-  const heroSlider = new Swiper('.hero', heroSliderOptions);
+  const heroSlider = new Swiper('.heroSwiperSlider', heroSliderOptions);
+  const newsSlider = new Swiper('.newsSwiperSlider', newsSliderOptions);
 });
