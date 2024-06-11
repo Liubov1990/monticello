@@ -76,3 +76,13 @@
   line-clamp: $amount;
   -webkit-box-orient: vertical;
 }
+
+@mixin animateDisplayTransition($duration) {
+  transition-property: opacity, display;
+  transition-duration: $duration;
+  display: block;
+  opacity: 1;
+  @starting-style {
+    opacity: 0;
+  }
+}
