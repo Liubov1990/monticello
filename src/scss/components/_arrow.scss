@@ -2,16 +2,6 @@
 
 .arrow {
   position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 20;
-  @include for-tablet-landscape-down {
-    bottom: 30px;
-  }
-  @include for-phone-only {
-    bottom: 20px;
-  }
 
   &:hover {
     &__icon-link {
@@ -22,6 +12,14 @@
     }
   }
 
+  &--next {
+    transform: rotate(-90deg);
+  }
+
+  &--prev {
+    transform: rotate(90deg);
+  }
+
   &__icon-link {
     @include transition(border-color 0.1s ease-in-out);
     border-color: $white-color-07;
@@ -29,5 +27,44 @@
 
   &__icon {
     @include transition(transform 0.5s ease-in-out);
+  }
+}
+
+.hero {
+  .arrow {
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    @include for-tablet-landscape-down {
+      bottom: 30px;
+    }
+    @include for-phone-only {
+      bottom: 20px;
+    }
+  }
+}
+
+.news {
+  .arrow--prev,
+  .arrow--next {
+    top: 46.5%;
+    @include for-phone-only {
+      display: none;
+    }
+  }
+
+  .arrow--prev {
+    left: 20px;
+    @include for-phone-only {
+      left: 10px;
+    }
+  }
+
+  .arrow--next {
+    right: 20px;
+    @include for-phone-only {
+      right: 10px;
+    }
   }
 }

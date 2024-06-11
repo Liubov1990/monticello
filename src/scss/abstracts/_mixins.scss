@@ -38,13 +38,13 @@
 
 @mixin responsive-font($min-size, $max-size) {
   $font-diff: $max-size - $min-size;
-  $screen-diff: $max-content-width - 375;
+  $screen-diff: $max-content-width - 320;
   font-size: calc(#{$min-size + px} + #{$font-diff} * ((100vw - #{$min-content-width}) / #{$screen-diff}));
 }
 
 @mixin responsive-line-height($min-size, $max-size) {
   $line-height-diff: $max-size - $min-size;
-  $screen-diff: $max-content-width - 375;
+  $screen-diff: $max-content-width - 320;
   line-height: calc(#{$min-size + px} + #{$line-height-diff} * ((100vw - #{$min-content-width}) / #{$screen-diff}));
 }
 
@@ -66,4 +66,13 @@
 
 @mixin transition($params...) {
   transition: $params;
+}
+
+@mixin trancLines($amount) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $amount;
+  line-clamp: $amount;
+  -webkit-box-orient: vertical;
 }
