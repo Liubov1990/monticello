@@ -7,6 +7,12 @@
   &__bg-image {
     @include responsive-image();
     height: 549px;
+    @include for-tablet-landscape-down {
+      height: 450px;
+    }
+    @include for-phone-only {
+      height: 380px;
+    }
   }
 
   &__overlay {
@@ -18,10 +24,19 @@
     right: 0;
     bottom: 0;
     z-index: 20;
+    @include for-tablet-landscape-down {
+      justify-content: flex-end;
+    }
   }
 
   &__inner {
     @include width-height($full-width);
+    @include for-tablet-landscape-down {
+      padding-bottom: 80px;
+    }
+    @include for-tablet-portrait-down {
+      padding-bottom: 40px;
+    }
   }
 
   &__wrap {
