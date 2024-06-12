@@ -41,9 +41,11 @@
 
   &__wrap {
     @include flex($justification: space-between);
+    transform: translate(0, -16px);
     @include for-tablet-portrait-down {
       flex-direction: column;
       align-items: center;
+      transform: translate(0, 0);
     }
   }
 
@@ -55,9 +57,9 @@
 
   &__copyright {
     @include fonts($f-size: 0.875rem, $l-height: 1.219, $color: $white-color);
+    margin-top: 25px;
     @include for-tablet-portrait-down {
       text-align: center;
-      margin-top: 20px;
       font-size: 0.75rem;
     }
   }
