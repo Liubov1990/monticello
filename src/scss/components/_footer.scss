@@ -1,0 +1,49 @@
+@use './../abstracts' as *;
+
+.footer {
+  @include width-height($full-width);
+  position: relative;
+
+  &__bg-image {
+    @include responsive-image();
+    height: 549px;
+  }
+
+  &__overlay {
+    @include flex(column, center, center);
+    @include width-height($full-width, $full-height);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+  }
+
+  &__inner {
+    @include width-height($full-width);
+  }
+
+  &__wrap {
+    @include flex($justification: space-between);
+    @include for-tablet-portrait-down {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    @include for-tablet-portrait-down {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__copyright {
+    @include fonts($f-size: 0.875rem, $l-height: 1.219, $color: $white-color);
+    @include for-tablet-portrait-down {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.75rem;
+    }
+  }
+}
