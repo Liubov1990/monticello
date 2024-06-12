@@ -35,6 +35,10 @@ body {
     padding-right: 15px;
     padding-left: 15px;
   }
+
+  &--small {
+    max-width: 770px;
+  }
 }
 
 .section {
@@ -75,6 +79,10 @@ body {
 .text-icon {
   @include width-height(9px, 12px);
   margin-right: 6px;
+
+  &--violet {
+    fill: $icon-font-color;
+  }
 }
 
 a {
