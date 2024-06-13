@@ -17,13 +17,7 @@
 
   &__overlay {
     @include flex(column, center, center);
-    @include width-height($full-width, $full-height);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 20;
+    @include overlay();
     @include for-tablet-landscape-down {
       justify-content: flex-end;
     }

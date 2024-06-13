@@ -26,14 +26,8 @@
 
   &__overlay {
     @include flex(column, center);
-    @include width-height($full-width, $full-height);
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    @include overlay();
     padding-top: 113px;
-    box-sizing: border-box;
     @include for-tablet-landscape-down {
       padding-top: 64px;
     }
