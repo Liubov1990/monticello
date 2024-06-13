@@ -1,5 +1,9 @@
 @use '../abstracts' as *;
 
+* {
+  scroll-behavior: smooth;
+}
+
 html {
   font-size: $initial-fsz;
   min-width: $min-content-width;
