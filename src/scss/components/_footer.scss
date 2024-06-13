@@ -3,6 +3,7 @@
 .footer {
   @include width-height($full-width);
   position: relative;
+  z-index: -1;
 
   &__bg-image {
     @include responsive-image();
