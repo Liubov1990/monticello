@@ -3,6 +3,7 @@
 .hero {
   position: relative;
   background: $hero-slider-bg;
+  overflow: hidden;
 
   .hero-slider {
     color: $white-color;

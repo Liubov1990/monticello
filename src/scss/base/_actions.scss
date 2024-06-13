@@ -5,3 +5,7 @@
     background: $header-bg;
   }
 }
+
+html:has(.header__burger--squeeze.is-active) {
+  overflow: hidden;
+}
