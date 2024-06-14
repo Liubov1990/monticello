@@ -3,6 +3,7 @@
 .hero {
   position: relative;
   background: $hero-slider-bg;
+  overflow: hidden;
 
   .hero-slider {
     color: $white-color;
@@ -24,13 +25,7 @@
 
     &__overlay {
       @include flex(column, center);
-      @include width-height($full-width, $full-height);
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      z-index: 100;
+      @include overlay();
     }
 
     &__content {

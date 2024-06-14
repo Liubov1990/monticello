@@ -54,6 +54,10 @@
 }
 
 .news {
+  .swiper {
+    z-index: 0;
+  }
+
   .newsSwiperSlider {
     .swiper-horizontal > .swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal {

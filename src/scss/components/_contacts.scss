@@ -1,0 +1,99 @@
+@use './../abstracts' as *;
+
+.contacts {
+  @include flex(column);
+  @include width-height($full-width);
+  max-width: 770px;
+  min-width: 320px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -66.7%);
+  background: $white-color;
+  padding-top: 55px;
+  padding-bottom: 39px;
+  @include for-tablet-portrait-down {
+    padding-top: 64px;
+  }
+  @include for-phone-only {
+    padding-top: 50px;
+  }
+
+  &__info-block {
+    @include flex($justification: space-between);
+    gap: 30px;
+    padding: 4px 30px;
+    @include for-tablet-portrait-down {
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 20px;
+    }
+    @include for-phone-only {
+      padding-top: 15px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__contact-info {
+    @include fonts($l-height: 1.75, $color: $black-color);
+    margin-top: 0;
+    margin-bottom: 24px;
+    @include for-tablet-portrait-down {
+      @include responsive-font(16, 18);
+      margin-bottom: 15px;
+    }
+    @include for-phone-only {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    &-link {
+      color: $black-color;
+    }
+  }
+
+  &__form {
+    @include flex(column, $alignment: flex-end);
+    @include width-height($full-width);
+    max-width: 310px;
+    @include for-tablet-portrait-down {
+      max-width: 100%;
+    }
+  }
+
+  &__input {
+    @include fonts($l-height: 1.5, $color: $black-color);
+    @include width-height($full-width);
+    border-bottom: 1px solid $main-text-color-02;
+    padding: 2px 0 12px 0;
+    margin-bottom: 31px;
+    box-sizing: border-box;
+
+    &:not(:last-of-type) {
+      @include for-tablet-portrait-down {
+        margin-bottom: 20px;
+      }
+    }
+
+    &,
+    &:focus {
+      border-left: none;
+      border-top: none;
+      border-right: none;
+      outline: none;
+    }
+
+    &,
+    &::placeholder {
+      @extend %description;
+    }
+
+    &::placeholder {
+      color: $inactive-color-05;
+    }
+
+    &:focus {
+      border-bottom-color: $main-text-color;
+    }
+  }
+}
