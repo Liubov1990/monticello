@@ -118,3 +118,7 @@ li {
 .icon-fill-color {
   --icon-fill-color: #{$white-color};
 }
+
+input:-webkit-autofill {
+  transition: background-color 1s 5000s;
+}

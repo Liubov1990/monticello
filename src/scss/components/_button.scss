@@ -39,4 +39,15 @@
     line-height: 1.5;
     width: 140px;
   }
+
+  &--disabled {
+    color: $white-color;
+    border-color: $inactive-color-05;
+    background: $inactive-color-05;
+    &:hover {
+      color: $white-color;
+      border-color: $inactive-color-05;
+      background: $inactive-color-05;
+    }
+  }
 }

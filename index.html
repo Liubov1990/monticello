@@ -598,9 +598,33 @@
               </p>
             </address>
             <form action="#" method="post" name="contact-form" class="contacts__form">
-              <input type="text" id="name" name="name" required placeholder="Name" class="contacts__input" />
-              <input type="email" id="email" name="email" required placeholder="Email" class="contacts__input" />
-              <button class="button button--violet button--small contacts__button" type="submit">SUBMIT</button>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                autocomplete="off"
+                placeholder="Name"
+                class="contacts__input"
+              />
+              <span class="contacts__message contacts__name-message">Name should consist of 3-14 letters.</span>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="off"
+                placeholder="Email"
+                class="contacts__input"
+              />
+              <span class="contacts__message contacts__email-message">Only '&#64;gmail.com' is accepted.</span>
+              <button
+                class="button button--violet button--small button--disabled contacts__button"
+                disabled
+                type="submit"
+              >
+                SUBMIT
+              </button>
             </form>
           </div>
         </section>

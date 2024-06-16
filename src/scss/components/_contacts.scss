@@ -69,11 +69,11 @@
     margin-bottom: 31px;
     box-sizing: border-box;
 
-    &:not(:last-of-type) {
-      @include for-tablet-portrait-down {
-        margin-bottom: 20px;
-      }
-    }
+    // &:not(:last-of-type) {
+    //   @include for-tablet-portrait-down {
+    //     margin-bottom: 20px;
+    //   }
+    // }
 
     &,
     &:focus {
@@ -94,6 +94,32 @@
 
     &:focus {
       border-bottom-color: $main-text-color;
+
+      & + .contacts__name-message,
+      & + .contacts__email-message {
+        @include animateDisplayTransition();
+        opacity: 1;
+      }
     }
+  }
+
+  &__message {
+    @include fonts($f-size: 0.6875rem, $color: $inactive-color-05);
+    line-height: 0;
+    position: relative;
+    top: -23px;
+
+    &--invalid {
+      color: $invalid-color;
+    }
+
+    &--valid {
+      color: $valid-color;
+    }
+  }
+
+  &__name-message,
+  &__email-message {
+    display: none;
   }
 }
