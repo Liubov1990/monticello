@@ -1,0 +1,5 @@
+<button
+  class="button @@if (context.color === 'blue') {button--blue} @@if (context.color === 'violet') {button--violet} @@if (context.component === 'contacts') {button--small button--disabled contacts__button}"
+  type="@@if (context.type === 'button') {button} @@if (context.type === 'submit') {submit}" @@if (context.component === 'contacts') {disabled}>
+  @@if (context.component === "projects") {MORE DETAILS} @@if (context.component === "gallery") {SEE MORE} @@if (context.component === "contacts") {SUBMIT}
+</button>

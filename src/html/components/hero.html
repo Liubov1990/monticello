@@ -1,0 +1,7 @@
+<section class="swiper heroSwiperSlider hero section">
+  @@include("header.html")
+  <div id="about" class="swiper-wrapper hero-slider">
+    @@loop("../partials/hero-slider-item.html", "../data/hero-slider-items.json")
+  </div>
+  @@include("../partials/swiper-pagination.html", {"dots": "vertical"}) @@include("../partials/arrow.html")
+</section>

@@ -1,0 +1,7 @@
+<section class="section gallery">
+  <div class="container gallery__inner">
+    <h2 class="heading">GALLERY</h2>
+    <div class="gallery__items-container">@@loop("../partials/gallery-item.html", "../data/gallery-items.json")</div>
+    @@include("../partials/button.html", {"component": "gallery", "type": "button", "color": "blue"})
+  </div>
+</section>

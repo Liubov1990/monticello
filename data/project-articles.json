@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1",
+    "imgSrc": "./assets/images/projects/joel_filipe_151697_1.webp",
+    "altText": "Rey Juan Carlos hospital (Rafael de La-Hoz) in Madrid.",
+    "category": "ONE WORLD",
+    "projectsName": "TRADE CENTER",
+    "description": "Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.",
+    "ariaLabel": "See distance to the target on map",
+    "textIconSrc": "./assets/svg/sprite.svg#location-dot-icon",
+    "distanceText": "New York City, United States - 1776 feet"
+  },
+  {
+    "id": "2",
+    "imgSrc": "./assets/images/projects/photos_1284ih4hjf4mhngw_1.webp",
+    "altText": "Orange bricks multi-storied building with blue sky and white cirrus clouds on the background.",
+    "category": "INTERNATIONAL",
+    "projectsName": "COMMERCE CENTRE",
+    "description": "Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.",
+    "ariaLabel": "See distance to the target on map",
+    "textIconSrc": "/assets/svg/sprite.svg#location-dot-icon",
+    "distanceText": "Hong Kong - 1588 feet"
+  }
+]

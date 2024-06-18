@@ -1,0 +1,33 @@
+[
+  {
+    "id": "1",
+    "imgSrc": "./assets/images/gallery/previews/scott_webb_176434_1.webp",
+    "altText": "Photo by Scott Webb of City Hall in Toronto, Canada.",
+    "svgIcon": "./assets/svg/sprite.svg#zoom-in-icon"
+  },
+
+  {
+    "id": "2",
+    "imgSrc": "./assets/images/gallery/previews/photos_13323p6bdc0uhr8bq_1.webp",
+    "altText": "Silver Tower, Frankfurt.",
+    "svgIcon": "./assets/svg/sprite.svg#zoom-in-icon"
+  },
+  {
+    "id": "3",
+    "imgSrc": "./assets/images/gallery/previews/echo_grid_156713_1.webp",
+    "altText": "Top corner of multi-storey orange building and clear blue sky on the background.",
+    "svgIcon": "./assets/svg/sprite.svg#zoom-in-icon"
+  },
+  {
+    "id": "4",
+    "imgSrc": "./assets/images/gallery/previews/fuse_brussels_169216_1.webp",
+    "altText": "Part of Silver Tower bent inside, Frankfurt.",
+    "svgIcon": "./assets/svg/sprite.svg#zoom-in-icon"
+  },
+  {
+    "id": "5",
+    "imgSrc": "./assets/images/gallery/previews/tu_tram_pham_202263_2.webp",
+    "altText": "The Broad Museum in LA by Tu Tram Pham",
+    "svgIcon": "./assets/svg/sprite.svg#zoom-in-icon"
+  }
+]
