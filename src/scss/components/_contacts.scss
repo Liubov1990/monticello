@@ -107,6 +107,9 @@
     line-height: 0;
     position: relative;
     top: -23px;
+    @include for-tablet-portrait-down {
+      top: -8px;
+    }
 
     &--invalid {
       color: $invalid-color;
