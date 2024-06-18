@@ -1,0 +1,23 @@
+<section id="news" class="section news">
+  <img
+    src="./assets/images/news/background.webp"
+    alt="White sketch of city on blue colored background."
+    class="news__background-image"
+    width="1600"
+    height="978"
+  />
+  <div class="news__overlay">
+    <h2 class="heading heading--white">LATEST NEWS</h2>
+    <div class="news__container">
+      <div class="swiper newsSwiperSlider">
+        <div class="swiper-wrapper news-slider">
+          @@loop("../partials/news-slider-item.html", "../data/news-slider-items.json")
+        </div>
+
+        @@include("../partials/swiper-pagination.html", {"dots": "horizontal"})
+      </div>
+
+      @@include("../partials/arrow.html", { "arrow": "next" }) @@include("../partials/arrow.html", { "arrow": "prev" })
+    </div>
+  </div>
+</section>
