@@ -42,11 +42,11 @@
 
   &--disabled {
     color: $white-color;
-    border-color: $inactive-color-05;
+    border: transparent;
     background: $inactive-color-05;
     &:hover {
       color: $white-color;
-      border-color: $inactive-color-05;
+      border: transparent;
       background: $inactive-color-05;
     }
   }
