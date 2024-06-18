@@ -31,14 +31,18 @@ export const handleForm = () => {
       submitBtn.removeAttribute('disabled');
       removeClass(submitBtn, 'button--disabled');
     } else {
-      submitBtn.setAttribute('disabled', true);
-      addClass(submitBtn, 'button--disabled');
+      resetButton();
     }
   };
 
-  const resetForm = (inputElem, messageElem) => {
+  const resetInputs = (inputElem, messageElem) => {
     inputElem.value = '';
     removeClass(messageElem, 'contacts__message--valid');
+  };
+
+  const resetButton = () => {
+    submitBtn.setAttribute('disabled', true);
+    addClass(submitBtn, 'button--disabled');
   };
 
   const submitForm = event => {
@@ -47,8 +51,13 @@ export const handleForm = () => {
     validateInput(userName, onlyLettersRegExp, nameMessage);
     validateInput(userEmail, onlyGmailRegExp, emailMessage);
 
-    resetForm(userName, nameMessage);
-    resetForm(userEmail, emailMessage);
+    resetInputs(userName, nameMessage);
+    resetInputs(userEmail, emailMessage);
+
+    resetButton();
+
+    validInputs.email = false;
+    validInputs.name = false;
   };
 
   userName.addEventListener('input', () => validateInput(userName, onlyLettersRegExp, nameMessage));
