@@ -97,8 +97,7 @@
 
       & + .contacts__name-message,
       & + .contacts__email-message {
-        @include animateDisplayTransition();
-        opacity: 1;
+        @include animateDisplayTransition(0.5s);
       }
     }
   }
