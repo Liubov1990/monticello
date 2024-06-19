@@ -1,0 +1,1 @@
+export const addClass=(s,a)=>s.classList.add(a);

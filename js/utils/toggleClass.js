@@ -1,0 +1,1 @@
+export const toggleClass=(s,t)=>s.classList.toggle(t);

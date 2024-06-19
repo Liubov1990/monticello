@@ -1,0 +1,1 @@
+import{submitBtn}from"../constants/queries.js";import{addClass}from"../utils/addClass.js";export const resetButton=()=>{submitBtn.setAttribute("disabled",!0),addClass(submitBtn,"button--disabled")};
