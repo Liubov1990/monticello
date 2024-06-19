@@ -1,20 +1,12 @@
+import { form, userName, userEmail, nameMessage, emailMessage, submitBtn } from '../constants/queries.js';
 import { onlyLettersRegExp, onlyGmailRegExp } from '../constants/regExp.js';
+import { validInputs } from '../constants/form.js';
+import { sendEmail } from './sendEmail.js';
+import { resetButton } from './resetButton.js';
 import { removeClass } from '../utils/removeClass.js';
 import { addClass } from '../utils/addClass.js';
 
 export const handleForm = () => {
-  const form = document.querySelector('.contacts__form');
-  const userName = document.querySelector('#name');
-  const userEmail = document.querySelector('#email');
-  const nameMessage = document.querySelector('.contacts__name-message');
-  const emailMessage = document.querySelector('.contacts__email-message');
-  const submitBtn = document.querySelector('.contacts__button');
-
-  const validInputs = {
-    name: false,
-    email: false
-  };
-
   const validateInput = ({ id, value }, pattern, message) => {
     const isPatternValid = pattern.test(value);
     validInputs[id] = isPatternValid && true;
@@ -35,29 +27,13 @@ export const handleForm = () => {
     }
   };
 
-  const resetInputs = (inputElem, messageElem) => {
-    inputElem.value = '';
-    removeClass(messageElem, 'contacts__message--valid');
-  };
-
-  const resetButton = () => {
-    submitBtn.setAttribute('disabled', true);
-    addClass(submitBtn, 'button--disabled');
-  };
-
   const submitForm = event => {
     event.preventDefault();
 
     validateInput(userName, onlyLettersRegExp, nameMessage);
     validateInput(userEmail, onlyGmailRegExp, emailMessage);
 
-    resetInputs(userName, nameMessage);
-    resetInputs(userEmail, emailMessage);
-
-    resetButton();
-
-    validInputs.email = false;
-    validInputs.name = false;
+    sendEmail();
   };
 
   userName.addEventListener('input', () => validateInput(userName, onlyLettersRegExp, nameMessage));

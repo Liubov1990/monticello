@@ -8,6 +8,7 @@ const cleanCss = require('gulp-clean-css');
 const gulpCopy = require('gulp-copy');
 const terser = require('gulp-terser');
 const browserSync = require('browser-sync').create();
+const dotenv = require('dotenv');
 
 const browserSyncReload = done => {
   browserSync.reload();
