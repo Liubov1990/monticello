@@ -1,1 +1,1 @@
-export const API_KEY="6AWkO2K3-tzvb9dak";export const SERVICE_ID="service_wvjcwxc";export const TEMPLATE_ID="template_399y1ej";
+export const API_KEY="";export const SERVICE_ID="";export const TEMPLATE_ID="";
