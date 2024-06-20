@@ -40,6 +40,11 @@
   &__item {
     position: relative;
     overflow: hidden;
+    user-select: none;
+    @include for-desktop-up {
+      min-width: 285px;
+      min-height: 214px;
+    }
 
     &:first-child {
       grid-column-start: 1;

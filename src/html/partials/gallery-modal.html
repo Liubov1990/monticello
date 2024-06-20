@@ -1,0 +1,11 @@
+<div id="gallery-modal" class="gallery__modal">
+  <span class="gallery__close">&times;</span>
+  <div class="gallery__modal-content">
+    <div class="gallery__modal-image-wrap">
+      <img src="" alt="" class="gallery__modal-image" width="700" height="525" />
+      @@include("../partials/arrow.html", { "arrow": "next", "galleryModal": "imageNext" })
+      @@include("../partials/arrow.html", { "arrow": "prev", "galleryModal": "imagePrev" })
+    </div>
+    <p class="gallery__modal-caption"></p>
+  </div>
+</div>

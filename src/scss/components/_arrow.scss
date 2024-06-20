@@ -48,7 +48,6 @@
 .news {
   .arrow--prev,
   .arrow--next {
-    top: 46.5%;
     @include for-phone-only {
       display: none;
     }
@@ -66,5 +65,21 @@
     @include for-phone-only {
       right: 10px;
     }
+  }
+}
+
+.gallery {
+  .arrow--prev,
+  .arrow--next {
+    position: absolute;
+    top: 48%;
+  }
+
+  .arrow--prev {
+    left: 5px;
+  }
+
+  .arrow--next {
+    right: 5px;
   }
 }

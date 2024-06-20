@@ -62,4 +62,4 @@ const watchFiles = function () {
 };
 
 exports.default = gulp.series(copy, html, css, js, watchFiles);
-exports.build = gulp.parallel(html, css, js);
+exports.build = gulp.parallel(copy, html, css, js);

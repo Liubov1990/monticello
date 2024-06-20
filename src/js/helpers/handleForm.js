@@ -1,4 +1,4 @@
-import { form, userName, userEmail, nameMessage, emailMessage, submitBtn } from '../constants/queries.js';
+import { userName, userEmail, nameMessage, emailMessage, submitBtn } from '../constants/queries.js';
 import { onlyLettersRegExp, onlyGmailRegExp } from '../constants/regExp.js';
 import { validInputs } from '../constants/form.js';
 import { sendEmail } from './sendEmail.js';
@@ -7,6 +7,8 @@ import { removeClass } from '../utils/removeClass.js';
 import { addClass } from '../utils/addClass.js';
 
 export const handleForm = () => {
+  const form = document.querySelector('.contacts__form');
+
   const validateInput = ({ id, value }, pattern, message) => {
     const isPatternValid = pattern.test(value);
     validInputs[id] = isPatternValid && true;

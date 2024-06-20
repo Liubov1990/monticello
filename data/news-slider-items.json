@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "ariaLabel": "Read whole article",
     "imgSrc": "./assets/images/news/image.webp",
     "imgAltText": "Corner part of grey building exterior with window in white frame, reflecting this wall.",
@@ -14,7 +14,7 @@
   },
 
   {
-    "id": "2",
+    "id": 2,
     "ariaLabel": "Read whole article",
     "imgSrc": "./assets/images/news/matthew_hamilton_202227_1.webp",
     "imgAltText": "Angle view of multi-storey white building with blue sky on the background.",
@@ -28,7 +28,7 @@
   },
 
   {
-    "id": "3",
+    "id": 3,
     "ariaLabel": "Read whole article",
     "imgSrc": "./assets/images/news/joel_filipe_151690_1.webp",
     "imgAltText": "Herzog & de Meuron's BBVA Headquarters in Madrid.",
@@ -42,7 +42,7 @@
   },
 
   {
-    "id": "4",
+    "id": 4,
     "ariaLabel": "Read whole article",
     "imgSrc": "./assets/images/news/image.webp",
     "imgAltText": "Corner part of grey building exterior with window in white frame, reflecting this wall.",
@@ -56,7 +56,7 @@
   },
 
   {
-    "id": "5",
+    "id": 5,
     "ariaLabel": "Read whole article",
     "imgSrc": "./assets/images/news/matthew_hamilton_202227_1.webp",
     "imgAltText": "Angle view of multi-storey white building with blue sky on the background.",
@@ -67,19 +67,5 @@
     "authorName": "DOMINIC FREEMAN",
     "dateTime": "2019-12-13",
     "dateTimeTextContent": "13 Dec 2019"
-  },
-
-  {
-    "id": "6",
-    "ariaLabel": "Read whole article",
-    "imgSrc": "./assets/images/news/joel_filipe_151690_1.webp",
-    "imgAltText": "Herzog & de Meuron's BBVA Headquarters in Madrid.",
-    "title": "HYPNOTIZE YOURSELF INTO THE GHOST.",
-    "description": "There are many things that are important to catalog design...",
-    "avatarImg": "./assets/images/avatars/photos_13323tafapisrc9io_1.webp",
-    "avatarImgAltText": "Photo of happy and smiling Alice Ward.",
-    "authorName": "ALICE WARD",
-    "dateTime": "2019-11-30",
-    "dateTimeTextContent": "30 Nov 2019"
   }
 ]

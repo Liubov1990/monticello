@@ -1,5 +1,11 @@
-<div class="arrow @@if (context.arrow === 'next') {arrow--next} @@if (context.arrow === 'prev') {arrow--prev}">
-  <a href="#projects" aria-label="Go to Projects" class="icon-link arrow__icon-link">
+<div
+  class="arrow @@if (context.arrow === 'next') {arrow--next} @@if (context.slider === 'sliderNext') {swiper-button-next} @@if (context.galleryModal === 'imageNext') {arrow__gallery-next} @@if (context.arrow === 'prev') {arrow--prev} @@if (context.slider === 'sliderPrev') {swiper-button-prev} @@if (context.galleryModal === 'imagePrev') {arrow__gallery-prev}"
+>
+  <a
+    @@if (context.hero === 'toProjects') {href="#projects"}
+    aria-label="Go to Projects"
+    class="icon-link arrow__icon-link"
+  >
     <svg class="icon icon-fill-color arrow__icon">
       <use xlink:href="./assets/svg/sprite.svg#angle-down-icon" />
     </svg>

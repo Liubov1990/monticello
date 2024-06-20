@@ -11,19 +11,19 @@ export const sendEmail = async () => {
 
     emailjs.init(API_KEY);
 
-    await emailjs.send(SERVICE_ID, TEMPLATE_ID, emailJsTemplate).then(() => {
-      clearInputs(userName, nameMessage);
-      clearInputs(userEmail, emailMessage);
+    await emailjs.send(SERVICE_ID, TEMPLATE_ID, emailJsTemplate);
 
-      resetButton();
+    clearInputs(userName, nameMessage);
+    clearInputs(userEmail, emailMessage);
 
-      validInputs.name = false;
-      validInputs.email = false;
+    resetButton();
 
-      setTimeout(() => {
-        alert('Your personal contacts successfully sent. We will get in touch with you within one working day.');
-      }, 1);
-    });
+    validInputs.name = false;
+    validInputs.email = false;
+
+    setTimeout(() => {
+      alert('Your personal contacts successfully sent. We will get in touch with you within one working day.');
+    }, 1);
   } catch (err) {
     alert('Something went wrong!');
   }
