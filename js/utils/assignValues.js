@@ -1,0 +1,1 @@
+export const assignValues=(s,a,t)=>{s.src=t.src,s.alt=t.alt,a.innerHTML=t.alt};
