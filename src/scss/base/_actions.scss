@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+.root:has(.header__burger--squeeze.is-active) {
+  .header {
+    background: $header-bg;
+  }
+}
+
+html:has(.header__burger--squeeze.is-active) {
+  overflow: hidden;
+}
+
+html:has(.gallery__modal.is-modal) {
+  overflow: hidden;
+}

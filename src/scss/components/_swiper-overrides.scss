@@ -1,0 +1,85 @@
+@use '../abstracts' as *;
+
+.swiper-pagination-bullet {
+  @include width-height(10px, 10px);
+  @include border(1px, solid, $white-color);
+  text-align: center;
+  background: transparent;
+  box-sizing: border-box;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: $white-color;
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets {
+  @include flex(column);
+  gap: 40px;
+  @include for-vertical-dots {
+    gap: 30px;
+  }
+  @include for-tablet-portrait-down {
+    gap: 15px;
+  }
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets,
+.swiper-vertical > .swiper-pagination-bullets {
+  right: 56px;
+  width: 10px;
+  height: fit-content;
+  @include for-vertical-dots {
+    right: 22px;
+  }
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: '';
+}
+
+.hero {
+  .hero-slider {
+    .swiper-slide img {
+      transform: scale(1);
+      transition: all 3s ease-out;
+    }
+
+    .swiper-slide-active img {
+      transform: scale(1.2);
+      transition: all 10s ease-out;
+    }
+  }
+}
+
+.news {
+  .swiper {
+    z-index: 0;
+  }
+
+  .newsSwiperSlider {
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+      @include flex($justification: center);
+      gap: 32px;
+      @include for-vertical-dots {
+        gap: 30px;
+      }
+      @include for-tablet-portrait-down {
+        gap: 15px;
+      }
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: auto;
+    z-index: 0;
+  }
+  .swiper-button-next .icon,
+  .swiper-button-prev .icon {
+    width: 15px;
+    height: 16px;
+  }
+}

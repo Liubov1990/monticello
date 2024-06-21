@@ -1,0 +1,23 @@
+@use './colors' as *;
+
+$gfonts: (
+  'monts': '"Montserrat", sans-serif',
+  'opn-sns': '"Open Sans", sans-serif',
+  'source-sns': '"Source Sans 3", sans-serif'
+);
+
+$initial-fsz: 1rem;
+$fs-normal: normal;
+$fs-italic: italic;
+$fw-normal: 400;
+$fw-bold: 700;
+
+$full-width: 100%;
+$full-height: 100%;
+
+$max-content-width: 1230;
+$min-content-width: 320px;
+
+$hero-slider-bg: linear-gradient(243.43deg, $icon-font-color 16.9%, $accent-color 83.27%);
+$header-bg: linear-gradient(180deg, #7e5aff -40.9%, #55b7ff 92.27%);
+$nav-bg: linear-gradient(357.43deg, #7e5aff 16.9%, #55b7ff 83.27%);

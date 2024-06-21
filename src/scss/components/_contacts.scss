@@ -1,0 +1,133 @@
+@use './../abstracts' as *;
+
+.contacts {
+  @include flex(column);
+  @include width-height($full-width);
+  max-width: 770px;
+  min-width: 320px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -66.7%);
+  background: $white-color;
+  padding-top: 55px;
+  padding-bottom: 39px;
+  @include for-tablet-landscape-down {
+    width: 70%;
+  }
+  @include for-tablet-portrait-down {
+    padding-top: 64px;
+  }
+  @include for-phone-only {
+    padding-top: 50px;
+  }
+
+  &__info-block {
+    @include flex($justification: space-between);
+    gap: 30px;
+    padding: 4px 30px;
+    @include for-tablet-landscape-down {
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 20px;
+    }
+    @include for-phone-only {
+      padding-top: 15px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__contact-info {
+    @include fonts($l-height: 1.75, $color: $black-color);
+    margin-top: 0;
+    margin-bottom: 24px;
+    @include for-tablet-portrait-down {
+      @include responsive-font(16, 18);
+      margin-bottom: 15px;
+    }
+    @include for-phone-only {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    &-link {
+      color: $black-color;
+    }
+  }
+
+  &__form {
+    @include flex(column, $alignment: flex-end);
+    @include width-height($full-width);
+    max-width: 310px;
+    @include for-tablet-landscape-down {
+      max-width: 100%;
+    }
+  }
+
+  &__input {
+    @include fonts($l-height: 1.5, $color: $black-color);
+    @include width-height($full-width);
+    border-bottom: 1px solid $main-text-color-02;
+    padding: 2px 0 12px 0;
+    margin-bottom: 31px;
+    box-sizing: border-box;
+    @include for-tablet-portrait-down {
+      margin-bottom: 15px;
+    }
+
+    &,
+    &:focus {
+      border-left: none;
+      border-top: none;
+      border-right: none;
+      outline: none;
+    }
+
+    &,
+    &::placeholder {
+      @extend %description;
+    }
+
+    &::placeholder {
+      color: $inactive-color-05;
+    }
+
+    &:focus {
+      border-bottom-color: $main-text-color;
+
+      & + .contacts__name-message,
+      & + .contacts__email-message {
+        @include animateDisplayTransition(0.5s);
+      }
+    }
+  }
+
+  &__message {
+    @include fonts($f-size: 0.6875rem, $color: $inactive-color-05);
+    line-height: 0;
+    position: relative;
+    top: -23px;
+    @include for-tablet-portrait-down {
+      top: -8px;
+    }
+
+    &--invalid {
+      color: $invalid-color;
+    }
+
+    &--valid {
+      color: $valid-color;
+    }
+  }
+
+  &__name-message,
+  &__email-message {
+    display: none;
+  }
+
+  &__button {
+    @include for-tablet-portrait-down {
+      margin-top: 20px;
+    }
+  }
+}

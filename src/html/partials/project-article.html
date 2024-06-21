@@ -1,0 +1,17 @@
+<article class="projects__project-item">
+  <div class="projects__image-wrap">
+    <img src="@@imgSrc" alt="@@altText" class="projects__image" width="630" height="470" />
+  </div>
+  <div class="projects__project-item-content">
+    <span class="projects__category">@@category</span>
+    <h3 class="projects__name">@@projectsName</h3>
+    <p class="projects__description">@@description</p>
+    @@include("button.html", {"component": "projects", "type": "button", "color": "blue"})
+    <a href="@@locationLink" target="_blank" aria-label="@@ariaLabel" class="projects__location-distance">
+      <svg class="text-icon">
+        <use xlink:href="@@textIconSrc" />
+      </svg>
+      <span>@@distanceText</span>
+    </a>
+  </div>
+</article>

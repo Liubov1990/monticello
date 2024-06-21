@@ -1,0 +1,56 @@
+@use '../abstracts' as *;
+
+.button {
+  @include fonts($f-size: 0.875rem, $l-height: 1.219, $t-transform: uppercase);
+  @include width-height(190px, 50px);
+  @include border(1px, solid, $main-text-color);
+  @include transition(border-color, color, background 0.2s ease-in-out);
+  display: block;
+  text-align: center;
+  color: $black-color;
+  background: $white-color;
+  outline: none;
+  box-sizing: border-box;
+  @include for-tablet-portrait-down {
+    @include width-height(155px, 38px);
+  }
+
+  &:hover {
+    color: $white-color;
+    cursor: pointer;
+  }
+
+  &--violet {
+    &:hover {
+      border-color: $icon-font-color;
+      background: $icon-font-color;
+    }
+  }
+
+  &--blue {
+    &:hover {
+      border-color: $accent-color;
+      background: $accent-color;
+    }
+  }
+
+  &--small {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    width: 140px;
+    @include for-tablet-portrait-down {
+      font-size: 1rem;
+    }
+  }
+
+  &--disabled {
+    color: $white-color;
+    border: transparent;
+    background: $inactive-color-05;
+    &:hover {
+      color: $white-color;
+      border: transparent;
+      background: $inactive-color-05;
+    }
+  }
+}

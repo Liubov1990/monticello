@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "ariaLabel": "Read whole article",
+    "imgSrc": "./assets/images/news/image.webp",
+    "imgAltText": "Corner part of grey building exterior with window in white frame, reflecting this wall.",
+    "title": "SEE THE UNMATCHED BEAUTY OF THE GREAT.",
+    "description": "Free directories: directories are perfect for customers that are searching for...",
+    "avatarImg": "./assets/images/avatars/photos_13323tafapisrc9io23_1.webp",
+    "avatarImgAltText": "Photo of Alja Brun in black blouse looking aside.",
+    "authorName": "ALJA BRUN",
+    "dateTime": "2020-01-20",
+    "dateTimeTextContent": "20 Jan 2020"
+  },
+
+  {
+    "id": 2,
+    "ariaLabel": "Read whole article",
+    "imgSrc": "./assets/images/news/matthew_hamilton_202227_1.webp",
+    "imgAltText": "Angle view of multi-storey white building with blue sky on the background.",
+    "title": "EFFECTIVE ADVERTISING POINTERS.",
+    "description": "Having a home based business is a wonderful asset to your life...",
+    "avatarImg": "./assets/images/avatars/photos_13323vswmkapdzjih_1.webp",
+    "avatarImgAltText": "Photo of Dominic Freeman in white shirt and black backpack, standing with his back turned and looking down at town and mountain behind it.",
+    "authorName": "DOMINIC FREEMAN",
+    "dateTime": "2019-12-13",
+    "dateTimeTextContent": "13 Dec 2019"
+  },
+
+  {
+    "id": 3,
+    "ariaLabel": "Read whole article",
+    "imgSrc": "./assets/images/news/joel_filipe_151690_1.webp",
+    "imgAltText": "Herzog & de Meuron's BBVA Headquarters in Madrid.",
+    "title": "HYPNOTIZE YOURSELF INTO THE GHOST.",
+    "description": "There are many things that are important to catalog design...",
+    "avatarImg": "./assets/images/avatars/photos_13323tafapisrc9io_1.webp",
+    "avatarImgAltText": "Photo of happy and smiling Alice Ward.",
+    "authorName": "ALICE WARD",
+    "dateTime": "2019-11-30",
+    "dateTimeTextContent": "30 Nov 2019"
+  },
+
+  {
+    "id": 4,
+    "ariaLabel": "Read whole article",
+    "imgSrc": "./assets/images/news/image.webp",
+    "imgAltText": "Corner part of grey building exterior with window in white frame, reflecting this wall.",
+    "title": "SEE THE UNMATCHED BEAUTY OF THE GREAT.",
+    "description": "Free directories: directories are perfect for customers that are searching for...",
+    "avatarImg": "./assets/images/avatars/photos_13323tafapisrc9io23_1.webp",
+    "avatarImgAltText": "Photo of Alja Brun in black blouse looking aside.",
+    "authorName": "ALJA BRUN",
+    "dateTime": "2020-01-20",
+    "dateTimeTextContent": "20 Jan 2020"
+  },
+
+  {
+    "id": 5,
+    "ariaLabel": "Read whole article",
+    "imgSrc": "./assets/images/news/matthew_hamilton_202227_1.webp",
+    "imgAltText": "Angle view of multi-storey white building with blue sky on the background.",
+    "title": "EFFECTIVE ADVERTISING POINTERS.",
+    "description": "Having a home based business is a wonderful asset to your life...",
+    "avatarImg": "./assets/images/avatars/photos_13323vswmkapdzjih_1.webp",
+    "avatarImgAltText": "Photo of Dominic Freeman in white shirt and black backpack, standing with his back turned and looking down at town and mountain behind it.",
+    "authorName": "DOMINIC FREEMAN",
+    "dateTime": "2019-12-13",
+    "dateTimeTextContent": "13 Dec 2019"
+  }
+]

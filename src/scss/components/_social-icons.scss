@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+.social-icons {
+  @include flex($alignment: center, $justification: space-between);
+  gap: 20px;
+}
+
+.header {
+  .social-icons {
+    @include for-laptop-down {
+      display: none;
+    }
+  }
+}

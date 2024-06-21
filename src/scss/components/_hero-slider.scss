@@ -1,0 +1,65 @@
+@use '../abstracts' as *;
+
+.hero {
+  position: relative;
+  background: $hero-slider-bg;
+  overflow: hidden;
+
+  .hero-slider {
+    color: $white-color;
+    @include for-phone-only {
+      min-height: 350px;
+    }
+
+    &__item {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &__image {
+      @include responsive-image();
+      @include for-tablet-portrait-down {
+        min-height: 385px;
+      }
+    }
+
+    &__overlay {
+      @include flex(column, center);
+      @include overlay();
+    }
+
+    &__content {
+      @include flex(column, center, center);
+      @include width-height($full-width, $full-height);
+      text-align: center;
+      transform: translateX(3px);
+      padding: 10px 50px;
+    }
+
+    &__title {
+      @include fonts($f-weight: $fw-bold, $l-spacing: 0.1em, $t-transform: uppercase, $color: $white-color);
+      @include responsive-font(16, 80);
+      @include responsive-line-height(22, 50);
+      margin-bottom: 16px;
+      margin-top: 41px;
+      @include for-desktop-up {
+        font-size: 80px;
+      }
+      @include for-tablet-landscape-down {
+        margin-bottom: 0;
+      }
+      @include for-phone-only {
+        font-size: 1.125rem;
+        margin-top: 15px;
+      }
+    }
+
+    &__subtitle {
+      @include fonts($l-spacing: 0.3em, $t-transform: uppercase, $color: $white-color);
+      @include responsive-font(10, 18);
+      @include for-desktop-up {
+        font-size: 18px;
+      }
+    }
+  }
+}

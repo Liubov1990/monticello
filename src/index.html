@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico?" />
+    <meta
+      name="description"
+      content="Monticello is a worldwide consulting firm of ideas, construction, interior design and advisory management services for the architectural industry."
+    />
+    <title>Monticello</title>
+
+    <meta property="og:url" content="https://liubov1990.github.io/monticello/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Global architectural services and management firm" />
+    <meta
+      property="og:description"
+      content="Monticello is a worldwide consulting firm of ideas, construction, interior design and advisory management services for the architectural industry."
+    />
+    <meta
+      property="og:image"
+      content="https://liubov1990.github.io/monticello/assets/images/tu_tram_pham_202263_2.webp"
+    />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:alt" content="The Broad Museum in LA by Tu Tram Pham" />
+    <meta property="og:site_name" content="Monticello" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="root">
+      @@include("html/components/hero.html")
+      <main class="main">
+        @@include("html/components/projects.html") @@include("html/components/news.html")
+        @@include("html/components/gallery.html") @@include("html/components/map.html")
+        @@include("html/components/contacts.html")
+      </main>
+      @@include("html/components/footer.html")
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

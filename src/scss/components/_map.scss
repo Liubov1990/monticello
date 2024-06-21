@@ -1,0 +1,11 @@
+@use '../abstracts' as *;
+
+.map {
+  @include width-height($full-width);
+  height: 700px;
+
+  &__frame {
+    @include responsive-image();
+    border: none;
+  }
+}
