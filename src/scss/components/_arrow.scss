@@ -4,7 +4,7 @@
   position: absolute;
 
   &:hover {
-    &__icon-link {
+    .arrow__icon-link {
       border-color: $white-color;
     }
     .hero-slider__to-projects-icon {

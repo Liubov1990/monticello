@@ -1,8 +1,8 @@
 import { getItemImg } from './getItemImg.js';
 import { assignValues } from '../utils/assignValues.js';
-import { items, captionText, modalImg } from '../constants/queries.js';
+import { items, captionText } from '../constants/queries.js';
 
-export const circleFullscreenImages = index => {
+export const circleFullscreenImages = (index, modalImg) => {
   const prevGalleryImg = document.querySelector('.arrow__gallery-prev');
   const nextGalleryImg = document.querySelector('.arrow__gallery-next');
 

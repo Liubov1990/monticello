@@ -73,7 +73,6 @@
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: $amount;
-  line-clamp: $amount;
   -webkit-box-orient: vertical;
 }
 

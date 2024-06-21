@@ -8,6 +8,7 @@
     "description": "Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.",
     "ariaLabel": "See distance to the target on map",
     "textIconSrc": "./assets/svg/sprite.svg#location-dot-icon",
+    "locationLink": "https://maps.app.goo.gl/nbbJ6jKJSrvjYxg7A",
     "distanceText": "New York City, United States - 1776 feet"
   },
   {
@@ -19,6 +20,7 @@
     "description": "Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.",
     "ariaLabel": "See distance to the target on map",
     "textIconSrc": "./assets/svg/sprite.svg#location-dot-icon",
+    "locationLink": "https://maps.app.goo.gl/wcTTm7JRZbbvkJML6",
     "distanceText": "Hong Kong - 1588 feet"
   }
 ]
