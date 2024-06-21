@@ -1,1 +1,0 @@
-import{removeClass}from"../utils/removeClass.js";export const clearInputs=(s,e)=>{s.value="",removeClass(e,"contacts__message--valid")};

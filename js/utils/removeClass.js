@@ -1,1 +1,0 @@
-export const removeClass=(s,e)=>s.classList.remove(e);

@@ -1,1 +1,0 @@
-export const validInputs={name:!1,email:!1};export const emailJsTemplate={name:null,email:null};
