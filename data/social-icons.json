@@ -1,20 +1,20 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "href": "https://www.facebook.com",
     "ariaLabel": "Find us on Facebook",
     "title": "Facebook",
     "svgIcon": "./assets/svg/sprite.svg#facebook-icon"
   },
   {
-    "id": "2",
+    "id": 2,
     "href": "https://twitter.com",
     "ariaLabel": "Find us on Twitter",
     "title": "Twitter",
     "svgIcon": "./assets/svg/sprite.svg#twitter-icon"
   },
   {
-    "id": "3",
+    "id": 3,
     "href": "https://www.instagram.com",
     "ariaLabel": "Find us on Instagram",
     "title": "Instagram",

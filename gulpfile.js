@@ -6,16 +6,43 @@ const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
 const cleanCss = require('gulp-clean-css');
 const gulpCopy = require('gulp-copy');
-const terser = require('gulp-terser');
 const browserSync = require('browser-sync').create();
+const dotenv = require('dotenv');
+const imagemin = require('gulp-imagemin');
+const webp = require('imagemin-webp');
+const replace = require('gulp-ext-replace');
+const babelify = require('babelify');
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+const uglify = require('gulp-uglify');
 
 const browserSyncReload = done => {
   browserSync.reload();
   done();
 };
 
-const copy = function () {
-  return gulp.src('./src/assets/**/*').pipe(gulpCopy('./dist/', { prefix: 1 }));
+const copySVG = function () {
+  return gulp.src('./src/assets/svg/*').pipe(gulpCopy('./dist/', { prefix: 1 }));
+};
+
+const images = function () {
+  return gulp
+    .src('./src/assets/images/**/*.{png,jpg}')
+    .pipe(
+      imagemin([
+        webp({
+          quality: 80,
+          effort: 6
+        })
+      ])
+    )
+    .pipe(replace('.webp'))
+    .pipe(gulp.dest('./dist/assets/images'));
+};
+
+const ico = function () {
+  return gulp.src('./src/assets/images/**/*.ico').pipe(imagemin()).pipe(gulp.dest('./dist/assets/images'));
 };
 
 const html = function () {
@@ -46,7 +73,16 @@ const css = function () {
 };
 
 const js = function () {
-  return gulp.src('./src/js/**/*.js').pipe(terser()).pipe(gulp.dest('./dist/js/'));
+  return browserify({
+    entries: ['./src/js/index.js'],
+    debug: true,
+    transform: [babelify.configure({ presets: ['@babel/preset-env'] })]
+  })
+    .bundle()
+    .pipe(source('index.js'))
+    .pipe(buffer())
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/js/'));
 };
 
 const watchFiles = function () {
@@ -60,5 +96,5 @@ const watchFiles = function () {
   gulp.watch(['./src/**/*.html', 'index.html'], gulp.series(html, browserSyncReload));
 };
 
-exports.default = gulp.series(copy, html, css, js, watchFiles);
-exports.build = gulp.parallel(html, css, js);
+exports.default = gulp.series(html, css, js, copySVG, images, ico, watchFiles);
+exports.build = gulp.parallel(html, css, js, copySVG, images, ico);

@@ -31,6 +31,7 @@
       margin-bottom: 35px;
     }
     @include for-phone-only {
+      // grid-template-columns: repeat(1, 1fr);
       margin-top: 15px;
       margin-bottom: 25px;
     }
@@ -38,16 +39,32 @@
 
   &__item {
     position: relative;
+    overflow: hidden;
+    user-select: none;
+    @include for-desktop-up {
+      min-width: 285px;
+      min-height: 214px;
+    }
 
     &:first-child {
       grid-column-start: 1;
       grid-column-end: 3;
       grid-row-start: 1;
       grid-row-end: 3;
+
+      // @include for-phone-only {
+      //   grid-column-end: 2;
+      //   grid-row-end: 2;
+      // }
     }
 
     &:hover {
       cursor: pointer;
+
+      .gallery__image {
+        transform: scale(1.15);
+        opacity: 0.7;
+      }
 
       .gallery__zoom-in-btn {
         @include animateDisplayTransition(0.5s);
@@ -57,6 +74,7 @@
 
   &__image {
     @include responsive-image();
+    @include transition(transform 0.5s linear);
   }
 
   &__item-overlay {

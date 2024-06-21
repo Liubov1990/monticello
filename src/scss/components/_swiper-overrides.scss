@@ -71,4 +71,15 @@
       }
     }
   }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: auto;
+    z-index: 0;
+  }
+  .swiper-button-next .icon,
+  .swiper-button-prev .icon {
+    width: 15px;
+    height: 16px;
+  }
 }

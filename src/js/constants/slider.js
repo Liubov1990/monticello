@@ -28,8 +28,8 @@ export const newsSliderOptions = {
     clickable: true
   },
   navigation: {
-    nextEl: '.arrow--next',
-    prevEl: '.arrow--prev'
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
   },
   breakpoints: {
     320: {

@@ -18,8 +18,8 @@
 
     &__image {
       @include responsive-image();
-      @include for-phone-only {
-        min-height: 350px;
+      @include for-tablet-portrait-down {
+        min-height: 385px;
       }
     }
 

@@ -38,15 +38,18 @@
     font-size: 1.125rem;
     line-height: 1.5;
     width: 140px;
+    @include for-tablet-portrait-down {
+      font-size: 1rem;
+    }
   }
 
   &--disabled {
     color: $white-color;
-    border-color: $inactive-color-05;
+    border: transparent;
     background: $inactive-color-05;
     &:hover {
       color: $white-color;
-      border-color: $inactive-color-05;
+      border: transparent;
       background: $inactive-color-05;
     }
   }
